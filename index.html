@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Password Generator </title>
+</head>
+<body>
+   
+    <div class="wrapper w-[100vw] h-[100vh] bg-gradient-to-r from-indigo-600 to-indigo-400">
+
+       <div class="container">
+
+            <h1>Password Generator </h1>
+
+            <div class="display-container">
+
+                <input readonly class="display" placeholder="password" data-PasswordDisplay>
+                <button data-copy>
+                    <span data-CopyMsg></span>
+                    <div>
+                    <!-- <i class="fa-regular fa-copy" style="color: #00a3d7;"></i> -->
+                    </div>
+                </button>
+            </div>
+
+            <div class="input-container">
+                
+                <!-- password length diplayer -->
+                <div class="length-contianer">
+                    <p>Password Length</p>
+                    <p data-LengthNumber>0</p>
+                </div>
+
+                <!-- password length slider -->
+                <input type="range" max="20" min="1" class="slider" step="1" data-LengthSlider id = "#password-display-node">
+
+                <!-- input chekcboxes -->
+                <div>
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Includes Uppercase Letters</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Includes Lowercase Letters</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="numbers">
+                    <label for="uppercase">Includes Numbers</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="symbols">
+                    <label for="uppercase">Includes Symbols</label>
+                </div>
+
+
+                <!-- strength section -->
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div data-indicator><i class="fa-solid fa-circle" style="color: #7a7a7a;"></i></div>
+                </div>
+
+                <!-- generate password button -->
+                <button class="generate-button">Generate Password</button>
+
+            </div>
+
+       </div> 
+
+
+    </div>    
+
+
+
+    <script src="https://kit.fontawesome.com/fa24b2c8e8.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
